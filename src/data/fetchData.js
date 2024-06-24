@@ -41,5 +41,7 @@ async function getJob(id) {
     }
   });
 }
+const jobAPI = { getJobs, getJob };
 
-export default { getJobs, getJob };
+export default jobAPI;
+

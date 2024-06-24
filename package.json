@@ -23,6 +23,10 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "rules":{
+      "eqeqeq": "warn",
+      "import/no-anonymous-default-export": "warn"
+    },
     "extends": [
       "react-app",
       "react-app/jest"
