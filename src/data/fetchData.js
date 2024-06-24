@@ -31,7 +31,15 @@ async function getJob(id) {
   });
   await promise;
 
-  return jobs.find((job) => job.id == id);
+  return jobs.find((job) => {
+    if (typeof job.id === 'string' && typeof id === 'number') {
+      return job.id === id.toString();
+    } else if (typeof job.id === 'number' && typeof id === 'string') {
+      return job.id.toString() === id;
+    } else {
+      return job.id === id;
+    }
+  });
 }
 
 export default { getJobs, getJob };

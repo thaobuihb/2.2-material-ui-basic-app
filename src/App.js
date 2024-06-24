@@ -2,18 +2,13 @@ import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
-import JobDetail from "./pages/JobDetail";
 
-import RequireAuth from "./auth/RequireAuth";
 import Login from "./pages/Login";
 import LoginModal from "./components/LoginModal";
 import JobDetailModal from "./components/JobDetailModal";
-import { useContext } from "react";
-import AuthContext from "./auth/AuthContext";
 
 function App() {
   const location = useLocation();
-  const auth = useContext(AuthContext);
   const state = location.state;
 
   return (
